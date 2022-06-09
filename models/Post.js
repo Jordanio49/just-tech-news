@@ -1,9 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
-const { truncate } = require('./User');
-
-// create our post model
-class Post extends Model{}
+// create our Post model
+class Post extends Model { }
 
 // create fields/columns for Post model
 Post.init(
@@ -12,7 +10,7 @@ Post.init(
             type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
-            AutoIncrement: true,
+            autoIncrement: true
         },
         title: {
             type: DataTypes.STRING,
